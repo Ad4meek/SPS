@@ -20,7 +20,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #159fad;
+    color: #4289d9;
 }
 
 .flex {
@@ -132,11 +132,26 @@ h1 {
 .obory a {
     font-size: 1.15rem;
     text-decoration: underline;
-    color: #333;
+    text-decoration-color: #000;    
 }
 
 .obory p {
     font-size: 0.80rem;
+}
+
+.rizeni a {   
+    text-decoration: underline;
+    font-size: 1.15rem;
+    text-decoration-color: #000;   
+}
+
+.rizeni ul {
+    padding-left: 1.25rem;
+}
+
+.rizeni li {
+    list-style-type: decimal;
+    padding-left: 0.15rem;
 }
 
 .aktuality {
@@ -145,7 +160,7 @@ h1 {
     margin: 1rem auto;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     border-bottom: 2px solid #333;  
     padding-bottom: 2rem;
 }
