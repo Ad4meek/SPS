@@ -72,7 +72,7 @@ header {
     height: 100px;
 }
 
-.background {
+.header-background {
     height: 60vh;
     background-size: auto;
 }
@@ -108,10 +108,13 @@ h1 {
    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+.grid-about > div:first-child > p {
+    padding: 2rem;
+}
+
 .grid-about > div:first-child {
     grid-column: 1/3;
     grid-row: 1/2;
-
 }
 
 .grid-about > div:nth-child(2) {
@@ -181,4 +184,45 @@ h1 {
 
 .aktuality .flex {
     justify-content: space-between;
+}
+
+.foto-main {
+    border-bottom: 2px solid #333;  
+    padding-bottom: 2rem;
+}
+
+.foto-flex {
+   display: flex;
+   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.foto-main img {
+    height: 300px; 
+    width: 20%;
+}
+
+iframe {
+    width: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mapa {
+    border-bottom: 2px solid #333;  
+    padding-bottom: 2rem;
+}
+
+.partners {
+    border-bottom: 2px solid #333;  
+    padding-bottom: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners img {
+    padding: 1rem;
+}
+
+.partners-flex {
+    display: flex;
+    align-items: center;
 }
