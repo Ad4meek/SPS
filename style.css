@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300&display=swap');
 
+/* main */
+
 * {
     box-sizing: border-box;
-    padding: 0;
+    padding: 0; 
     margin: 0;   
 }
 
@@ -28,9 +30,25 @@ a {
     color: #4289d9;
 }
 
+h2 {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
 .flex {
     display: flex;
 }
+
+/* navbar */
 
 nav a {
     color: #f0f0f0;
@@ -71,6 +89,8 @@ nav {
     height: 40px;
 }
 
+/* header */
+
  header {
     max-width: 1200px;
     margin: 0 auto;
@@ -103,19 +123,7 @@ nav {
     font-weight: 500;
 }
 
-h2 {
-    text-align: center;
-    padding: 1rem;
-}
-
-p {
-    text-align: justify;
-}
-
-h1 {
-    text-align: center;
-    padding: 10px;
-}
+/* about */
 
 .grid-about {
     display: grid;
@@ -123,9 +131,7 @@ h1 {
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
     max-width: 1200px;
-    margin: 1rem auto;
-    border-bottom: 2px solid #333;
-    padding-bottom: 2rem; 
+    margin: 0 auto;
 }
 
 .grid-skola1 {
@@ -139,13 +145,9 @@ h1 {
 }
 
 .grid-about div { 
-   padding: 15px;
+   padding: 0.75rem;
    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
    border-radius: 0.25rem;
-}
-
-.grid-about > div:first-child > p {
-    padding: 2rem;
 }
 
 .grid-about > div:first-child {
@@ -193,15 +195,19 @@ h1 {
     padding-left: 0.15rem;
 }
 
+/* aktuality */
+
+.aktuality-main {
+  background-color: #f9f9f9;
+}
+
 .aktuality {
     display: grid;
     max-width: 1200px;
-    margin: 1rem auto;
+    margin: 0 auto;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    border-bottom: 2px solid #333;  
-    padding-bottom: 2rem;
 }
 
 .aktuality > div {
@@ -209,6 +215,7 @@ h1 {
     padding: 15px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0.15rem;
+    background-color: #fff;
 }
 
 .aktuality > div > div  {
@@ -223,13 +230,9 @@ h1 {
     justify-content: space-between;
 }
 
-.foto-main {
-    border-bottom: 2px solid #333;  
-    padding-bottom: 2rem;
-    
-}
+/* foto gallery */
 
-.foto-flex {
+.foto-grid {
    display: grid;
    grid-template-columns: repeat(5, 1fr);
    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
@@ -237,43 +240,55 @@ h1 {
    overflow: hidden;
 }
 
-.foto-flex img {        
+.foto-grid img {        
     object-fit: cover;
     object-position: center;
     transition: 0.2s ease-in-out;
 }
 
-.foto-flex img:hover {
+.foto-grid img:hover {
     transform: scale(1.1);
 }
 
+/* map */
 
 iframe {
     width: 100%;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.mapa {
-    border-bottom: 2px solid #333;  
+/* partners */
+
+.partners {
+    max-width: 1200px;
+    margin: 0 auto;
     padding-bottom: 2rem;
 }
 
-.partners {
-    border-bottom: 2px solid #333;  
-    padding-bottom: 2rem;
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+} 
+
+.partners img {
+    height: 60px;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    object-fit: contain;
+}
+
+/* footer */
+
+footer {
+    background-color: #333;
+}
+
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.partners img {
-    padding: 1rem;
-    height: 95px;
-    width: 25%;
-}
-
-.partners-flex {
-    display: flex;
-}
+/* responsive */
 
 @media (max-width: 1200px) {
     nav div {
@@ -283,4 +298,8 @@ iframe {
     nav a {
         padding: 0.25rem;
     }
+}
+
+@media (max-width: 992px) {
+    
 }
