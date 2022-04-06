@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300&display=swap');
 
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+    margin: 0;   
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
 img {
     width: 100%;
@@ -28,18 +33,18 @@ a {
 }
 
 nav a {
-    color: #333;
-    padding: 0 10px;
+    color: #f0f0f0;
+    padding: 0 0.5rem;
+    font-weight: 300;
+    transition: 0.3s;
 }
 
-nav li:hover {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0;
+nav a:hover {
+    color: #333;
 }
 
 nav li {
     margin: 0 10px;
-    padding-bottom: 2px;
 }
 
 nav ul {
@@ -58,23 +63,44 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    font-size: 1.25rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 12vh;
+    font-size: 1.35rem;
 }
 
 .socials {
     height: 40px;
 }
 
-header {    
-    height: 100px;
-}
+ header {
+    max-width: 1200px;
+    margin: 0 auto;
+ }
 
 .header-background {
-    height: 60vh;
-    background-size: auto;
+    background: url(img/skola.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-about {
+    color: #fff;
+    margin: 45vh 0;
+    max-width: 800px;
+    text-shadow: 0 0 5px #000;
+    padding: 1rem;
+}
+
+.header-about h2 {
+    font-weight: 600;
+    text-align: start;
+    font-size: 3.5rem;
+    padding: 1rem 0;
+}
+
+.header-about p {
+    font-size: 1.25rem;
+    text-shadow: 0 0 2px #000;
+    font-weight: 500;
 }
 
 h2 {
@@ -97,15 +123,25 @@ h1 {
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 1rem auto;
     border-bottom: 2px solid #333;
-    padding-bottom: 2rem;
-    
+    padding-bottom: 2rem; 
+}
+
+.grid-skola1 {
+    background: url(img/grid-skola1.png) no-repeat center center;
+    background-size: cover;
+}
+
+.grid-skola2 {
+    background: url(img/grid-skola.png) no-repeat center center;
+    background-size: cover;
 }
 
 .grid-about div { 
    padding: 15px;
    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 0.25rem;
 }
 
 .grid-about > div:first-child > p {
@@ -172,6 +208,7 @@ h1 {
     border-bottom: 1px solid #333;
     padding: 15px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0.15rem;
 }
 
 .aktuality > div > div  {
@@ -189,17 +226,27 @@ h1 {
 .foto-main {
     border-bottom: 2px solid #333;  
     padding-bottom: 2rem;
+    
 }
 
 .foto-flex {
-   display: flex;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+   height: 300px;
+   overflow: hidden;
 }
 
-.foto-main img {
-    height: 300px; 
-    width: 20%;
+.foto-flex img {        
+    object-fit: cover;
+    object-position: center;
+    transition: 0.2s ease-in-out;
 }
+
+.foto-flex img:hover {
+    transform: scale(1.1);
+}
+
 
 iframe {
     width: 100%;
@@ -220,9 +267,20 @@ iframe {
 
 .partners img {
     padding: 1rem;
+    height: 95px;
+    width: 25%;
 }
 
 .partners-flex {
     display: flex;
-    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    nav div {
+        display: none;
+    }
+
+    nav a {
+        padding: 0.25rem;
+    }
 }
