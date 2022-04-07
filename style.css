@@ -89,7 +89,9 @@ nav {
     height: 40px;
 }
 
-/* header */
+span {
+    color: #ffd500;
+}
 
  header {
     max-width: 1200px;
@@ -237,18 +239,43 @@ nav {
    grid-template-columns: repeat(5, 1fr);
    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
    height: 300px;
-   overflow: hidden;
 }
 
-.foto-grid img {        
+figure {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background-color: #000;
+}
+
+figure * {
+    transition: all 1s ease-in-out;
+}
+
+figure h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+figure img {
+    opacity: 1;
     object-fit: cover;
     object-position: center;
-    transition: 0.2s ease-in-out;
 }
 
-.foto-grid img:hover {
+figure:hover img {
+    opacity: 0.5;
     transform: scale(1.1);
 }
+
+figure:hover h2 {
+    opacity: 1;
+}
+
 
 /* map */
 
@@ -303,3 +330,94 @@ footer {
 @media (max-width: 992px) {
     
 }
+
+/* figure {
+
+    color: #fff;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 2px;
+    min-width: 220px;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    background: #000000;
+    text-align: center;
+}
+figure * {
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+figure img {
+    opacity: 1;
+    width: 100%;
+}
+figure figcaption {
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+figure h2 {
+    font-family: 'keb',  Arial, sans-serif;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 42%;
+    opacity: 0;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    -webkit-transform: translateY(-20%) scale(0.7);
+    transform: translateY(-20%) scale(0.7);
+}
+figure p {
+    font-family: 'kmn',  Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 57%;
+    opacity: 0;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    -webkit-transform: translateY(-20%) scale(0.7);
+    transform: translateY(-20%) scale(0.7);
+}
+
+figure a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+figure:hover img,
+figure.hover img {
+    opacity: 0.5;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+figure:hover h2,
+figure.hover h2 {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
+figure:hover p,
+figure.hover p {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+    transform: translateY(0px) scale(1);
+} 
+*/
