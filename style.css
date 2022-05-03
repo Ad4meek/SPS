@@ -99,9 +99,9 @@ span {
  }
 
 .header-background {
-    background: url(img/skola.jpg) no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/skola.jpg) no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    height: 100vh; 
 }
 
 .header-about {
@@ -245,12 +245,11 @@ figure {
     color: #fff;
     position: relative;
     overflow: hidden;
-    color: #fff;
     background-color: #000;
 }
 
 figure * {
-    transition: all 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 figure h2 {
@@ -269,7 +268,7 @@ figure img {
 
 figure:hover img {
     opacity: 0.5;
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 figure:hover h2 {
