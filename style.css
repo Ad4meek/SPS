@@ -73,6 +73,10 @@ nav li {
     margin: 0 10px;
 }
 
+.logo {
+        padding: 0 10px;
+    }
+
 nav ul {
     display: flex;   
 }
@@ -310,8 +314,32 @@ iframe {
 
 /* footer */
 
+
 footer {
     background-color: #333;
+}
+
+footer h3 {
+    color: #fff;
+    padding: 1rem 0;
+}
+
+footer i {
+    color: #bbb;
+    padding-right: 10px;
+}
+
+footer li {
+    padding: 0.5rem 0;
+}
+
+footer a {
+    color: #aaa;   
+}
+
+footer a:hover {
+    color: #eee;
+    transition: 0.3s;
 }
 
 .footer-container {
@@ -321,9 +349,21 @@ footer {
     justify-content: space-between;
 }
 
+.footer-flex {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* responsive */
 
 @media (max-width: 1200px) {
+    
+    .logo {
+        padding: 0 0.5rem;
+    }
+    
     .grid-about {
         grid-template-columns: 1fr;
         grid-template-rows: 5fr;
@@ -370,40 +410,22 @@ footer {
     }
 
     .foto-grid {
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        height: 1500px;
     }
     
-    .foto-grid > figure:nth-child(1) {
-        grid-row: 1/3;
-        grid-column: 1/3;
+    .footer-container {
+        margin: 0 0.5rem;
     }
     
-    .foto-grid > figure:nth-child(2) {
-        grid-row: 1/2;
-        grid-column: 3/4;
-    }
-    
-    .foto-grid > figure:nth-child(3) {
-        grid-row: 1/2;
-        grid-column: 4/5;
-    }
-    
-    .foto-grid > figure:nth-child(4) {
-        grid-row: 2/3;
-        grid-column: 3/4;
-    }
-    .foto-grid > figure:nth-child(5) {
-        grid-row: 2/3;
-        grid-column: 4/5;
-    }
 }
 
 @media (max-width: 992px) {
-nav:first-child{
+    nav:first-child{
         padding: 1rem;
     }
-    
+
     .hamburger, .close {
         display: block;
         cursor: pointer;
@@ -460,5 +482,14 @@ nav:first-child{
         border-bottom: 1px solid white;
     }
 
+    .header-about p {
+        display: none;
+    }
 
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+    
 }
